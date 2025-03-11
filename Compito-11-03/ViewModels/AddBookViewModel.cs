@@ -1,26 +1,22 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Compito_11_03.Models
+namespace Compito_11_03.ViewModels
 {
-    public class Book
+    public class AddBookViewModel
     {
-        [Key]
-        public Guid Id { get; set; }
-
         [Required]
-        [StringLength(100, MinimumLength = 10)]
+        [StringLength(100, MinimumLength = 5)]
         public required string Titolo { get; set; }
 
         [Required]
-        [StringLength(100, MinimumLength = 10)]
+        [StringLength(100, MinimumLength = 5)]
         public required string Autore { get; set; }
 
         [Required]
-        [StringLength(100, MinimumLength = 10)]
+        [StringLength(100, MinimumLength = 5)]
         public required string Genere { get; set; }
 
         [Required]
         public required bool Disponibilità { get; set; } = false;
-
     }
 }

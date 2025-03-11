@@ -6,5 +6,38 @@
 
 
 <div>
-	<h1>Books</h1>
+	<h1 class="text-center">Books</h1>
+	<div class="text-end">
+		<a class="btn btn-primary" asp-controller="Book" asp-action="Add">Add new book</a>
+	</div>
+	@if (Model.Books != null && Model.Books.Count() > 0)
+	{
+		<table>
+			<thead>
+			<tr>Titolo</tr>
+			<tr>Autore</tr>
+			<tr>Genere</tr>
+			<tr>Disponibilità</tr>
+			<tr>Actions</tr>
+			</thead>
+			<tbody>
+				@foreach (var book in Model.Books)
+				{
+					<tr>
+						<td>@book.Titolo</td>
+						<td>@book.Autore</td>
+						<td>@book.Genere</td>
+						<td>@book.Disponibilità</td>
+						<td>
+							<a asp-controller="Book" asp-action="Details" asp-route-id="@book.Id">Details</a>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	}
+	else
+	{
+		<h4 class="text-danger text-center">No book found!</h4>
+	}
 </div>

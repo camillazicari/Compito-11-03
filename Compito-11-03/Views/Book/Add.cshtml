@@ -1,0 +1,31 @@
+﻿@model AddBookViewModel
+@{
+	ViewData["Title"] = "Add";
+}
+
+<div>
+	<h1 class="text-center">Add Book</h1>
+	<form method="post" asp-controller="Book" asp-action="Add">
+		<div class="mb-3">
+			<label for="titolo" class="form-label">Titolo</label>
+			<input id="titolo" type="text" class="form-control" asp-for="Titolo" />
+		</div>
+		<div class="mb-3">
+			<label for="autore" class="form-label">Autore</label>
+			<input id="autore" type="text" class="form-control" asp-for="Autore"></input>
+		</div>
+		<div class="mb-3">
+			<label for="genere" class="form-label">Genere</label>
+			<input id="genere" type="text" class="form-control" asp-for="Genere" />
+		</div>
+		<div class="mb-3">
+			<label for="disponibilità" class="form-label">Disponibilità</label>
+			<input type="checkbox" class="form-check-input" asp-for="Disponibilità" />
+		</div>
+		<button class="btn btn-success">Save</button>
+	</form>
+</div>
+
+@section Scripts {
+	<partial name="_ValidationScriptsPartial" />
+}
