@@ -16,7 +16,6 @@ namespace Compito_11_03.ViewModels
         [StringLength(100, MinimumLength = 5)]
         public required string Genere { get; set; }
 
-        [Required]
-        public required bool Disponibilità { get; set; } = false;
+        public required bool Disponibilita { get; set; } = false;
     }
 }

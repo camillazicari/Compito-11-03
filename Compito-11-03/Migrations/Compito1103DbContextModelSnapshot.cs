@@ -33,6 +33,9 @@ namespace Compito_11_03.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<bool>("Disponibilita")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Genere")
                         .IsRequired()
                         .HasMaxLength(100)

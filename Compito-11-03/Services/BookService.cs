@@ -59,7 +59,7 @@ namespace Compito_11_03.Services
                 Titolo = addBookViewModel.Titolo,
                 Autore = addBookViewModel.Autore,
                 Genere = addBookViewModel.Genere,
-                Disponibilità = addBookViewModel.Disponibilità
+                Disponibilita = addBookViewModel.Disponibilita
             };
 
             _context.Books.Add(book);

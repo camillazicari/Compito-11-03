@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Compito_11_03.Migrations
 {
     [DbContext(typeof(Compito1103DbContext))]
-    [Migration("20250311143353_Initial")]
+    [Migration("20250311162059_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -35,6 +35,9 @@ namespace Compito_11_03.Migrations
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool>("Disponibilita")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Genere")
                         .IsRequired()

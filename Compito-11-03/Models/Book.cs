@@ -19,8 +19,7 @@ namespace Compito_11_03.Models
         [StringLength(100, MinimumLength = 10)]
         public required string Genere { get; set; }
 
-        [Required]
-        public required bool Disponibilità { get; set; } = false;
+        public required bool Disponibilita { get; set; } = false;
 
     }
 }
