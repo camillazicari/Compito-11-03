@@ -7,18 +7,18 @@
 
 <div>
 	<h1 class="text-center">Books</h1>
-	<div class="text-end">
+	<div class="text-end mb-3">
 		<a class="btn btn-primary" asp-controller="Book" asp-action="Add">Add new book</a>
 	</div>
 	@if (Model.Books != null && Model.Books.Count() > 0)
 	{
-		<table>
+		<table class="table table-bordered text-center">
 			<thead>
-			<tr>Titolo</tr>
-			<tr>Autore</tr>
-			<tr>Genere</tr>
-			<tr>Disponibilità</tr>
-			<tr>Actions</tr>
+			<td>Titolo</td>
+			<td>Autore</td>
+			<td>Genere</td>
+			<td>Disponibilità</td>
+			<td>Actions</td>
 			</thead>
 			<tbody>
 				@foreach (var book in Model.Books)
